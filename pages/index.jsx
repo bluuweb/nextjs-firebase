@@ -13,9 +13,9 @@ export default function Home() {
 
     return (
         <div>
-            <main>
+            <main className="container">
                 <h1>Firebase</h1>
-                <button>Acceder</button>
+                <button className="btn btn-primary">Acceder</button>
             </main>
         </div>
     );
