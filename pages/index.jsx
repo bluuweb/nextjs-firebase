@@ -1,22 +1,17 @@
-import { useEffect } from "react";
+import Layout from "../components/layout/Layout";
 import { useUser } from "../context/userContext";
 
 export default function Home() {
-    const { loadingUser, user } = useUser();
+    const { loadingUser } = useUser();
 
-    useEffect(() => {
-        if (!loadingUser) {
-            console.log(user);
-        }
-        console.log(user);
-    }, [user]);
+    if (loadingUser) return <div className="container">Cargando</div>;
 
     return (
-        <div>
-            <main className="container">
-                <h1>Firebase</h1>
-                <button className="btn btn-primary">Acceder</button>
-            </main>
-        </div>
+        <Layout>
+            <h1>Firebase</h1>
+            <button className="btn btn-primary" onClick={loginGoogle}>
+                Acceder
+            </button>
+        </Layout>
     );
 }
