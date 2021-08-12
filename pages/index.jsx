@@ -9,9 +9,6 @@ export default function Home() {
     return (
         <Layout>
             <h1>Firebase</h1>
-            <button className="btn btn-primary" onClick={loginGoogle}>
-                Acceder
-            </button>
         </Layout>
     );
 }
